@@ -41,16 +41,27 @@ public class LoginTest extends BaseTest{
 	@Test
     public void loginTest4() throws Exception {
 		   Reporter.log("Test Case 4 Executing", true );	
-		String path=ExcelUtil.getCellData("Sheet1", 2, 2);
-     String username = ExcelUtil.getCellData("Sheet1", 2, 3);
-     String password = ExcelUtil.getCellData("Sheet1", 2, 4);
+		String path=ExcelUtil.getCellData("Sheet1", 3, 2);
+     String username = ExcelUtil.getCellData("Sheet1", 3, 3);
+     String password = ExcelUtil.getCellData("Sheet1", 3, 4);
      LoginPage loginPage = new LoginPage(driver);
      loginPage.login(path,username, password);
      loginPage.loginAssertionFalse();
      Reporter.log("Test Case 4 Executed", true );	
 
 	}
-	
+	@Test
+    public void loginTest5() throws Exception {
+		   Reporter.log("Test Case 4 Executing", true );	
+		String path=ExcelUtil.getCellData("Sheet1", 4, 2);
+     String username = ExcelUtil.getCellData("Sheet1", 4, 3);
+     String password = ExcelUtil.getCellData("Sheet1", 4, 4);
+     LoginPage loginPage = new LoginPage(driver);
+     loginPage.login(path,username, password);
+     loginPage.loginAssertionFalse();
+     Reporter.log("Test Case 4 Executed", true );	
+
+	}	
 	
 	
 }
