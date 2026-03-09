@@ -3,18 +3,23 @@ import org.testng.Reporter;
 import org.testng.annotations.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utils.ConfigReader;
+
+import java.time.Duration;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.firefox.*;
 import utils.ExtentManager;
 public class BaseTest {
 	ConfigReader config=new ConfigReader();
-	public static WebDriver driver;
+	protected WebDriver driver;                  // Not thread safe
+//	protected static ThreadLocal<WebDriver> driver = new ThreadLocal<>();  // Thread safe for implementing screenshot listener 
 	ChromeOptions chromeOption=new ChromeOptions();
 	FirefoxOptions firefoxOption=new FirefoxOptions();
 	
 	@BeforeSuite
 public void Setup() {
+		
 		Reporter.log("Before suit started", true );
 		String browser=config.Property("browser");
 		String url=config.Property("url");
@@ -27,9 +32,13 @@ public void Setup() {
 				chromeOption.addArguments("--disable-gpu");
 				chromeOption.addArguments("--window-size=1920,1080");	
 				driver = new ChromeDriver(chromeOption);
+				//driver.set(new ChromeDriver(chromeOption));
 			}	
-			else
+			else {
 				driver = new ChromeDriver();
+				//driver.set(new ChromeDriver());
+	
+			}
 			Reporter.log("Driver initialised", true );	
 				
 		}
@@ -41,18 +50,27 @@ public void Setup() {
 				firefoxOption.addArguments("--disable-gpu");
 				firefoxOption.addArguments("--window-size=1920,1080");	
 				driver = new FirefoxDriver(firefoxOption);
+				//driver.set(new FirefoxDriver(firefoxOption));
 			}
-			else
+			else {
 				driver = new FirefoxDriver();
-			Reporter.log("Driver initialised", true );	
-			
+				//driver.set(new FirefoxDriver());
 
+			}
+			Reporter.log("Driver initialised", true );	
 		}
 		driver.manage().window().maximize();
 		driver.get(url);
+		//getDriver().manage().window().maximize();
+        //getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        //getDriver().get(url);
 		ExtentManager.createTest("Test Started");
 }
-	
+/*
+	 public static WebDriver getDriver() {
+	        return driver.get();
+	    }	
+*/
 	
 @AfterSuite
 public void TearDown() {
@@ -60,21 +78,10 @@ public void TearDown() {
         driver.quit();
         ExtentManager.flushReport();
         Reporter.log("Driver quiting", true );	
-        Reporter.log("After suit executed", true );	
-		
+        Reporter.log("After suit executed", true );			
     }
 }
 
-@BeforeMethod
-public void BeforeTestcases() {
-	Reporter.log("Before Method TestCase Executing", true );
-	
-}
-@AfterMethod
-public void AfterTestcases() {
-	Reporter.log("After Method TestCase Executing", true );
-	
-}
 		
 
 	

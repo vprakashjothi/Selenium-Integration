@@ -1,162 +1,236 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="0" failed="0" skipped="5">
   <reporter-output>
     <line>
       <![CDATA[Before suit started]]>
     </line>
-    <line>
-      <![CDATA[Driver initialised]]>
-    </line>
-    <line>
-      <![CDATA[Before Method TestCase Executing]]>
-    </line>
-    <line>
-      <![CDATA[Test Case 1 Executing]]>
-    </line>
-    <line>
-      <![CDATA[Test Case 1 Executed]]>
-    </line>
-    <line>
-      <![CDATA[After Method TestCase Executing]]>
-    </line>
-    <line>
-      <![CDATA[Before Method TestCase Executing]]>
-    </line>
-    <line>
-      <![CDATA[Test Case 2 Executing]]>
-    </line>
-    <line>
-      <![CDATA[Logged in Successfully]]>
-    </line>
-    <line>
-      <![CDATA[Test Case 2 Executed]]>
-    </line>
-    <line>
-      <![CDATA[After Method TestCase Executing]]>
-    </line>
-    <line>
-      <![CDATA[Before Method TestCase Executing]]>
-    </line>
-    <line>
-      <![CDATA[Test Case 3 Executing]]>
-    </line>
-    <line>
-      <![CDATA[Your username is invalid!]]>
-    </line>
-    <line>
-      <![CDATA[Test Case 3 Executed]]>
-    </line>
-    <line>
-      <![CDATA[After Method TestCase Executing]]>
-    </line>
-    <line>
-      <![CDATA[Driver quiting]]>
-    </line>
-    <line>
-      <![CDATA[After suit executed]]>
-    </line>
   </reporter-output>
-  <suite started-at="2026-02-17T12:36:32 IST" name="Default suite" finished-at="2026-02-17T12:36:35 IST" duration-ms="2870">
+  <suite started-at="2026-03-08T18:25:31 IST" name="Default suite" finished-at="2026-03-08T18:25:31 IST" duration-ms="121">
     <groups>
     </groups>
-    <test started-at="2026-02-17T12:36:32 IST" name="Default test" finished-at="2026-02-17T12:36:35 IST" duration-ms="2870">
+    <test started-at="2026-03-08T18:25:31 IST" name="Default test" finished-at="2026-03-08T18:25:31 IST" duration-ms="121">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:tests.LoginTest@35b74c5c]" started-at="2026-02-17T12:36:28 IST" name="Setup" finished-at="2026-02-17T12:36:32 IST" duration-ms="4243" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:tests.LoginTest@3cfdd820]" started-at="2026-03-08T18:25:30 IST" name="Setup" finished-at="2026-03-08T18:25:30 IST" duration-ms="22" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "java.util.Properties.getProperty(String)" because "this.properties" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.properties" is null
+at utils.ConfigReader.Property(ConfigReader.java:21)
+at base.BaseTest.Setup(BaseTest.java:24)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
               <![CDATA[Before suit started]]>
             </line>
-            <line>
-              <![CDATA[Driver initialised]]>
-            </line>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method is-config="true" signature="BeforeTestcases()[pri:0, instance:tests.LoginTest@35b74c5c]" started-at="2026-02-17T12:36:32 IST" name="BeforeTestcases" finished-at="2026-02-17T12:36:32 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Initialise()[pri:0, instance:tests.LoginTest@3cfdd820]" started-at="2026-03-08T18:25:31 IST" name="Initialise" finished-at="2026-03-08T18:25:31 IST" depends-on-methods="base.BaseTest.Setup" duration-ms="0" status="SKIP">
           <reporter-output>
-            <line>
-              <![CDATA[Before Method TestCase Executing]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- BeforeTestcases -->
-        <test-method signature="loginTest1()[pri:0, instance:tests.LoginTest@35b74c5c]" started-at="2026-02-17T12:36:32 IST" name="loginTest1" finished-at="2026-02-17T12:36:33 IST" duration-ms="69" status="PASS">
+        </test-method> <!-- Initialise -->
+        <test-method signature="loginTest1()[pri:0, instance:tests.LoginTest@3cfdd820]" started-at="2026-03-08T18:25:31 IST" name="loginTest1" finished-at="2026-03-08T18:25:31 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "java.util.Properties.getProperty(String)" because "this.properties" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.properties" is null
+at utils.ConfigReader.Property(ConfigReader.java:21)
+at base.BaseTest.Setup(BaseTest.java:24)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
-            <line>
-              <![CDATA[Test Case 1 Executing]]>
-            </line>
-            <line>
-              <![CDATA[Test Case 1 Executed]]>
-            </line>
           </reporter-output>
         </test-method> <!-- loginTest1 -->
-        <test-method is-config="true" signature="AfterTestcases()[pri:0, instance:tests.LoginTest@35b74c5c]" started-at="2026-02-17T12:36:33 IST" name="AfterTestcases" finished-at="2026-02-17T12:36:33 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="captureFailure(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@3cfdd820]" started-at="2026-03-08T18:25:31 IST" name="captureFailure" finished-at="2026-03-08T18:25:31 IST" duration-ms="0" status="SKIP">
           <reporter-output>
-            <line>
-              <![CDATA[After Method TestCase Executing]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- AfterTestcases -->
-        <test-method is-config="true" signature="BeforeTestcases()[pri:0, instance:tests.LoginTest@35b74c5c]" started-at="2026-02-17T12:36:33 IST" name="BeforeTestcases" finished-at="2026-02-17T12:36:33 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- captureFailure -->
+        <test-method signature="loginTest2()[pri:0, instance:tests.LoginTest@3cfdd820]" started-at="2026-03-08T18:25:31 IST" name="loginTest2" finished-at="2026-03-08T18:25:31 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "java.util.Properties.getProperty(String)" because "this.properties" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.properties" is null
+at utils.ConfigReader.Property(ConfigReader.java:21)
+at base.BaseTest.Setup(BaseTest.java:24)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
-            <line>
-              <![CDATA[Before Method TestCase Executing]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- BeforeTestcases -->
-        <test-method signature="loginTest2()[pri:0, instance:tests.LoginTest@35b74c5c]" started-at="2026-02-17T12:36:33 IST" name="loginTest2" finished-at="2026-02-17T12:36:35 IST" duration-ms="2371" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Test Case 2 Executing]]>
-            </line>
-            <line>
-              <![CDATA[Logged in Successfully]]>
-            </line>
-            <line>
-              <![CDATA[Test Case 2 Executed]]>
-            </line>
           </reporter-output>
         </test-method> <!-- loginTest2 -->
-        <test-method is-config="true" signature="AfterTestcases()[pri:0, instance:tests.LoginTest@35b74c5c]" started-at="2026-02-17T12:36:35 IST" name="AfterTestcases" finished-at="2026-02-17T12:36:35 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="captureFailure(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@3cfdd820]" started-at="2026-03-08T18:25:31 IST" name="captureFailure" finished-at="2026-03-08T18:25:31 IST" duration-ms="0" status="SKIP">
           <reporter-output>
-            <line>
-              <![CDATA[After Method TestCase Executing]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- AfterTestcases -->
-        <test-method is-config="true" signature="BeforeTestcases()[pri:0, instance:tests.LoginTest@35b74c5c]" started-at="2026-02-17T12:36:35 IST" name="BeforeTestcases" finished-at="2026-02-17T12:36:35 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- captureFailure -->
+        <test-method signature="loginTest3()[pri:0, instance:tests.LoginTest@3cfdd820]" started-at="2026-03-08T18:25:31 IST" name="loginTest3" finished-at="2026-03-08T18:25:31 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "java.util.Properties.getProperty(String)" because "this.properties" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.properties" is null
+at utils.ConfigReader.Property(ConfigReader.java:21)
+at base.BaseTest.Setup(BaseTest.java:24)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
-            <line>
-              <![CDATA[Before Method TestCase Executing]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- BeforeTestcases -->
-        <test-method signature="loginTest3()[pri:0, instance:tests.LoginTest@35b74c5c]" started-at="2026-02-17T12:36:35 IST" name="loginTest3" finished-at="2026-02-17T12:36:35 IST" duration-ms="305" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Test Case 3 Executing]]>
-            </line>
-            <line>
-              <![CDATA[Your username is invalid!]]>
-            </line>
-            <line>
-              <![CDATA[Test Case 3 Executed]]>
-            </line>
           </reporter-output>
         </test-method> <!-- loginTest3 -->
-        <test-method is-config="true" signature="AfterTestcases()[pri:0, instance:tests.LoginTest@35b74c5c]" started-at="2026-02-17T12:36:35 IST" name="AfterTestcases" finished-at="2026-02-17T12:36:35 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="captureFailure(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@3cfdd820]" started-at="2026-03-08T18:25:31 IST" name="captureFailure" finished-at="2026-03-08T18:25:31 IST" duration-ms="0" status="SKIP">
           <reporter-output>
-            <line>
-              <![CDATA[After Method TestCase Executing]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- AfterTestcases -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:tests.LoginTest@35b74c5c]" started-at="2026-02-17T12:36:35 IST" name="TearDown" finished-at="2026-02-17T12:36:36 IST" duration-ms="329" status="PASS">
+        </test-method> <!-- captureFailure -->
+        <test-method signature="loginTest4()[pri:0, instance:tests.LoginTest@3cfdd820]" started-at="2026-03-08T18:25:31 IST" name="loginTest4" finished-at="2026-03-08T18:25:31 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "java.util.Properties.getProperty(String)" because "this.properties" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.properties" is null
+at utils.ConfigReader.Property(ConfigReader.java:21)
+at base.BaseTest.Setup(BaseTest.java:24)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
-            <line>
-              <![CDATA[Driver quiting]]>
-            </line>
-            <line>
-              <![CDATA[After suit executed]]>
-            </line>
+          </reporter-output>
+        </test-method> <!-- loginTest4 -->
+        <test-method is-config="true" signature="captureFailure(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@3cfdd820]" started-at="2026-03-08T18:25:31 IST" name="captureFailure" finished-at="2026-03-08T18:25:31 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureFailure -->
+        <test-method signature="loginTest5()[pri:0, instance:tests.LoginTest@3cfdd820]" started-at="2026-03-08T18:25:31 IST" name="loginTest5" finished-at="2026-03-08T18:25:31 IST" duration-ms="1" status="SKIP">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "java.util.Properties.getProperty(String)" because "this.properties" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.properties" is null
+at utils.ConfigReader.Property(ConfigReader.java:21)
+at base.BaseTest.Setup(BaseTest.java:24)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest5 -->
+        <test-method is-config="true" signature="captureFailure(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@3cfdd820]" started-at="2026-03-08T18:25:31 IST" name="captureFailure" finished-at="2026-03-08T18:25:31 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureFailure -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:tests.LoginTest@3cfdd820]" started-at="2026-03-08T18:25:31 IST" name="TearDown" finished-at="2026-03-08T18:25:31 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
       </class> <!-- tests.LoginTest -->

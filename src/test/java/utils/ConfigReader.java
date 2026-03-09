@@ -7,7 +7,7 @@ Properties properties;
 
 public ConfigReader() {
 	try {
-		FileInputStream file=new FileInputStream("src/test/resources/config.properties");
+		FileInputStream file=new FileInputStream("src/test/resources/config.propertie");
 		properties = new Properties();
 		properties.load(file);
 		
