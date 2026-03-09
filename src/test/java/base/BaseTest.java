@@ -19,7 +19,6 @@ public class BaseTest {
 	
 	@BeforeSuite
 public void Setup() {
-		//change 1
 		Reporter.log("Before suit started", true );
 		String browser=config.Property("browser");
 		String url=config.Property("url");
