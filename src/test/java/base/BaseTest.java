@@ -19,7 +19,7 @@ public class BaseTest {
 	
 	@BeforeSuite
 public void Setup() {
-		//Test GIT - first changes
+		
 		Reporter.log("Before suit started", true );
 		String browser=config.Property("browser");
 		String url=config.Property("url");
