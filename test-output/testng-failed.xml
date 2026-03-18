@@ -5,14 +5,12 @@
     <classes>
       <class name="tests.LoginTest">
         <methods>
+          <include name="captureFailure"/>
           <include name="loginTest2"/>
           <include name="Setup"/>
-          <include name="loginTest3"/>
-          <include name="loginTest1"/>
           <include name="loginTest4"/>
           <include name="Initialise"/>
           <include name="loginTest5"/>
-          <include name="captureFailure"/>
           <include name="TearDown"/>
         </methods>
       </class> <!-- tests.LoginTest -->

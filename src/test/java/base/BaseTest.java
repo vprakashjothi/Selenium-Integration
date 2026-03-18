@@ -1,4 +1,5 @@
 package base;
+import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -10,23 +11,26 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.firefox.*;
 import utils.ExtentManager;
+import utils.FailureNotification;
+import utils.ScreenshotUtil;
 public class BaseTest {
 	ConfigReader config=new ConfigReader();
 	protected WebDriver driver;                  // Not thread safe
 //	protected static ThreadLocal<WebDriver> driver = new ThreadLocal<>();  // Thread safe for implementing screenshot listener 
 	ChromeOptions chromeOption=new ChromeOptions();
 	FirefoxOptions firefoxOption=new FirefoxOptions();
-	
+	boolean failureNotifyEnabled;
 	@BeforeSuite
 public void Setup() {
 		Reporter.log("Before suit started", true );
 		String browser=config.Property("browser");
 		String url=config.Property("url");
-		String mode=config.Property("mode");
+		String executionMode=config.Property("ExecutionMode");
+		failureNotifyEnabled=config.Property("FailureNotificationEnabled").equals("true")?true:false;
 		if(browser.equalsIgnoreCase("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
-			if(mode.equalsIgnoreCase("headless")) {
+			if(executionMode.equalsIgnoreCase("headless")) {
 				chromeOption.addArguments("--headless=new");  // Chrome 109+
 				chromeOption.addArguments("--disable-gpu");
 				chromeOption.addArguments("--window-size=1920,1080");	
@@ -44,7 +48,7 @@ public void Setup() {
 		else if(browser.equalsIgnoreCase("firefox")) 
 		{
 			WebDriverManager.firefoxdriver().setup();
-			if(mode.equalsIgnoreCase("headless")) {
+			if(executionMode.equalsIgnoreCase("headless")) {
 				firefoxOption.addArguments("--headless=new");  // Chrome 109+
 				firefoxOption.addArguments("--disable-gpu");
 				firefoxOption.addArguments("--window-size=1920,1080");	
@@ -81,7 +85,21 @@ public void TearDown() {
     }
 }
 
-		
+@AfterMethod
+public void captureFailure(ITestResult result) throws Exception {
+
+    if (ITestResult.FAILURE == result.getStatus()) {
+        //Screenshot attach on failure
+    	ScreenshotUtil.attachScreenshot(driver);
+        //Notification Push 
+        Reporter.log("TestName: "+result.getTestName()+"\nName: "+result.getName(), true);
+        if(failureNotifyEnabled==true)
+        FailureNotification.NotificationPush(result.getName(),result.getTestName());
+        //FailureNotification.removeNotification();
+    }
+}
+
+
 
 	
 }
